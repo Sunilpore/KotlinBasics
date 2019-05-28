@@ -1,14 +1,14 @@
-package com.ktbasiceg
+package com.ktbasiceg.basics
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import com.google.gson.Gson
+import com.ktbasiceg.LogHelper
+import com.ktbasiceg.R
 import java.lang.Exception
 
-class MainActivity : AppCompatActivity() {
+class Idioms : AppCompatActivity() {
 
     val act_tag = "log_data"
 
@@ -26,15 +26,15 @@ class MainActivity : AppCompatActivity() {
 
         val result = try{
             transform("Red")
-        } catch (e:Exception){
+        } catch (e: Exception){
             e.message
         }
         Log.d(act_tag,"color: "+result)
 
 
         val result2 = try{
-            transformWhen("White")
-        }catch (e:Exception){
+            transform("White")
+        }catch (e: Exception){
             "Enter valid color Name..."
             //e.message
         }
@@ -75,13 +75,6 @@ class MainActivity : AppCompatActivity() {
             "Blue" -> 2
             else -> throw IllegalArgumentException("Invalid color param value")
         }
-    }
-
-    fun transformWhen(color: String): Int = when (color) {
-        "Red" -> 0
-        "Green" -> 1
-        "Blue" -> 2
-        else -> throw IllegalArgumentException("Invalid color param value")
     }
 
 
