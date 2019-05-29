@@ -2,7 +2,7 @@ package com.ktbasiceg.basic2.model
 
 import java.lang.reflect.Constructor
 
-class Person(var sportName:String){
+class Person (var sportName:String){
 
     var name: String = ""
 
