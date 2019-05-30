@@ -1,4 +1,4 @@
-package com.ktbasiceg.basic2
+package com.ktbasiceg.basic2.mykotlin
 
 import com.ktbasiceg.basic2.model.Person
 

@@ -67,7 +67,9 @@ fun main(args:Array<String>){
 
 
     returnFun1()
-    reurnFun2()
+    reurnFun2()  // label for loop
+
+    continueState()
     returnFun3()
 
 }
@@ -90,12 +92,28 @@ fun returnFun1(){
     }
 }
 
+//Labeled for loop
 fun reurnFun2(){
     println()
-    listOf(1, 2, 3, 4, 5).forEach lit@{
-        if (it == 3) return@lit // local return to the caller of the lambda, i.e. the forEach loop without executing below code and execute next condition of loop
+    listOf(1, 2, 3, 4, 5).forEach myLoop@{
+        if (it == 3) return@myLoop // local return to the caller of the lambda, i.e. the forEach loop without executing below code and execute next condition of loop
         print(it)
     }
+}
+
+//Continue statement
+fun continueState(){
+
+ outerLoop@ for (i in 1..3){
+                for(j in 1..2){
+
+                    if(i == 2){
+                    continue@outerLoop //It will skip below code return back to loop and proced in normal way
+                    }
+                    println("cont: $i $j")
+                }
+ }
+
 }
 
 fun returnFun3(){
@@ -104,5 +122,7 @@ fun returnFun3(){
         if (it == 3) return@forEach // local return to the caller of the lambda, i.e. the forEach loop
         print(it)
     }
+
+
 }
 

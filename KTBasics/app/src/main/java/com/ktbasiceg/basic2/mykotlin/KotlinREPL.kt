@@ -1,4 +1,4 @@
-package com.ktbasiceg.basic2
+package com.ktbasiceg.basic2.mykotlin
 
 /**
  * REPL -> Read, Eval Print Loop

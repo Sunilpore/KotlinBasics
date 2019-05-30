@@ -1,4 +1,4 @@
-package com.ktbasiceg.basic2
+package com.ktbasiceg.basic2.mykotlin
 
 open class Base {
     var a = 1 // public by default
@@ -8,7 +8,7 @@ open class Base {
     protected  fun e() { } // visible to the Base and the Derived class
 }
 
-class Derived:Base() {
+class Derived: Base() {
 
     // a, c, d, and e() of the Base class are visible
     // b is not visible
