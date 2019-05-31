@@ -1,4 +1,4 @@
-package com.ktbasiceg.basic2.mykotlin
+package com.ktbasiceg.basic2.mykotlin.visibility_modifier
 
 open class Base {
     var a = 1 // public by default

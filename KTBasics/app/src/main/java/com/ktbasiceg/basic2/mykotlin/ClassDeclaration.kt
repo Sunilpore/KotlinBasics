@@ -19,7 +19,7 @@ class Sport (var name:String) {
             println("Sport name is ${name} and no. of teams are $id")
     }
 
-    //Here declaring parameter in secondary constructor is not allow
+    //Here declaring parameter in secondary constructor is not allowed
     constructor(secName: String, id: Int): this(secName){
         //The body of the Secondary constructor is called after the init block
         this.id = id
