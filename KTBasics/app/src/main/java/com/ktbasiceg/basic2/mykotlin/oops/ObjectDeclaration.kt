@@ -1,5 +1,8 @@
 package com.ktbasiceg.basic2.mykotlin.oops
 
+/**
+ *  Companion Objects are same as 'object' but declared within a class
+ */
 
 fun main(arg:Array<String>){
 
@@ -13,15 +16,16 @@ fun main(arg:Array<String>){
 
 }
 
+//when we define companion object inside the class all the fields and methods inside companion object behave as a STATIC
 
 class MyCompanionClass{
 
     companion object {
 
-        var count:Int = -1
+        var count:Int = -1          // behave like a STATIC variable
 
         @JvmStatic
-        fun typeOfCustomers():String {
+        fun typeOfCustomers():String {  //behave like a STATIC method
             return "Regular"
         }
 
