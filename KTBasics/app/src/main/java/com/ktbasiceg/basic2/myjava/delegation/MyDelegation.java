@@ -8,6 +8,7 @@ public class MyDelegation {
         steve.code();
         steve.design();
         steve.test();
+        steve.testFail();
     }
 
 }
@@ -41,6 +42,11 @@ class Employee implements WhoCanCode, WhoCanDesign, WhoCanTest{
         tester.test();
     }
 
+    @Override
+    public void testFail() {
+        tester.testFail();
+    }
+
 }
 
 class FastCoder implements WhoCanCode{
@@ -66,6 +72,12 @@ class DangerousTester implements WhoCanTest{
     public void test() {
         System.out.println("Tested by dangerous Tester");
     }
+
+    @Override
+    public void testFail() {
+        System.out.println("Tested fail report");
+    }
+
 }
 
 
@@ -81,5 +93,6 @@ interface WhoCanDesign{
 
 interface WhoCanTest{
     void test();
+    void testFail();
 }
 

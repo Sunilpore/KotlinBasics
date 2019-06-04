@@ -5,7 +5,7 @@ import com.ktbasiceg.design_pattern.decorator_pattern.phone_eg.concrete_decorato
 import com.ktbasiceg.design_pattern.decorator_pattern.phone_eg.concrete_decorator.IPhone;
 import com.ktbasiceg.design_pattern.decorator_pattern.phone_eg.interfaces.Phone;
 
-public class MainPhone {
+public class PhoneManufactureActivity {
 
     public static void main(String[] args) {
 
