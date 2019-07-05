@@ -3,7 +3,7 @@ package com.ktbasiceg.basic2.myjava;
 import com.ktbasiceg.basic2.mykotlin.MyCustomFileName;
 import com.ktbasiceg.basic2.mykotlin.oops.MyCompanionClass;
 
-public class MyJava {
+public class MyJava implements A,B{
 
 
     public static void main(String args[]){
@@ -27,4 +27,23 @@ public class MyJava {
         return a*b;
     }
 
+    @Override
+    public void displayMsg() {
+
+    }
+
+
+
+}
+
+
+
+
+
+interface A {
+    void displayMsg();
+}
+
+interface B {
+    void displayMsg();
 }
