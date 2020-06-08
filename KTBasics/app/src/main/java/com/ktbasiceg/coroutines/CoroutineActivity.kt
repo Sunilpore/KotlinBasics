@@ -99,4 +99,9 @@ class CoroutineActivity : AppCompatActivity() {
 
     Coroutine is thread independent.
     Means, you can start coroutine from one thread and pass it to another thread do some work and again pass it to another thread
+
+    Coroutine Scope/Coroutine Context:-
+    Grouping a bunch of jobs together.
+    So if you want to execute Job1...5 and on suddenly on Job 3 it fails , so you cancel all of the coroutines within that scope.
+    So it is way to group them together , So that if one fail you can cancel them all
  */

@@ -42,6 +42,7 @@ class CoroutineActivity3 : AppCompatActivity() {
             scope.cancel() */
 
             //To avoid this problem
+            //If not pass any job along with IO then it will cancel all the jobs
             val scope =  CoroutineScope(IO + job).launch {
                 println("coroutine ${this} is activated with job ${job}")
 
@@ -56,7 +57,7 @@ class CoroutineActivity3 : AppCompatActivity() {
            /* //It will create a new coroutine context, independent of any other coroutine context
             CoroutineScope(IO + job).launch {}
             CoroutineScope(IO + job2).launch {}
-            //job2 is totally independent of job. So if you cancel job then it will not interere with job2
+            //job2 is totally independent of job. So if you cancel job then it will not interfere with job2
             */
 
         }
@@ -100,6 +101,7 @@ class CoroutineActivity3 : AppCompatActivity() {
 
 
     fun showToast(text:String){
+        //Here we can access from any where. So we define GlobalScope here
         GlobalScope.launch(Main) {
             Toast.makeText(this@CoroutineActivity3,text,Toast.LENGTH_SHORT).show()
         }
