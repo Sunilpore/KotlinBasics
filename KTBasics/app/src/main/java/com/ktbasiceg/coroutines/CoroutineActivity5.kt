@@ -5,9 +5,11 @@ import android.os.Bundle
 import com.ktbasiceg.R
 import kotlinx.android.synthetic.main.activity_coroutine4.*
 import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers.Main
 import java.lang.Exception
 import kotlin.system.measureTimeMillis
 
+//Sequential Background Tasks with Coroutine
 class CoroutineActivity5 : AppCompatActivity() {
 
     private val RESULT_1 = "Result_1"
@@ -18,9 +20,39 @@ class CoroutineActivity5 : AppCompatActivity() {
         setContentView(R.layout.activity_coroutine5)
 
         btn_click.setOnClickListener {
-            setNewText("Clicked!")
+            //setNewText("Clicked!")
+            testRunBlockScope()
+            //fakeApiRequest()
+        }
 
-            fakeApiRequest()
+    }
+
+    private fun testRunBlockScope(){
+
+        CoroutineScope(Main).launch {
+            logThread("Started job in thread ")
+
+            val result1 = getResult1Api()
+            println("debug_kt: result1: $result1")
+
+            val result2 = getResult1Api()
+            println("debug_kt: result2: $result2")
+
+            val result3 = getResult1Api()
+            println("debug_kt: result3: $result3")
+
+            val result4 = getResult1Api()
+            println("debug_kt: result4: $result4")
+        }
+
+        //Here it will block all others scopes till its excution is not completed
+        CoroutineScope(Main).launch {
+            delay(1000)
+            runBlocking {
+                logThread("Blocking thread")
+                delay(4000)
+                logThread("Blocking thread completed.")
+            }
         }
 
     }
