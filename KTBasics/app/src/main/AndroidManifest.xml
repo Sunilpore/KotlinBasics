@@ -19,12 +19,13 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".coroutines.CoroutineActivity"></activity>
-        <activity android:name=".coroutines.CoroutineNetworkActivity"></activity>
-        <activity android:name=".coroutines.CoroutineActivity3">
+        <activity android:name=".coroutines.CoroutineActivity" />
+        <activity android:name=".coroutines.CoroutineNetworkActivity" />
+        <activity android:name=".coroutines.CoroutineActivity3"></activity>
+        <activity android:name=".coroutines.CoroutineActivity4">
         </activity>
 
-        <activity android:name=".coroutines.CoroutineActivity4">
+        <activity android:name=".coroutines.CoroutineActivity5">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
